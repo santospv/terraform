@@ -1,5 +1,5 @@
 resource "aws_instance" "test-ec2-instance" {
-  ami = "${var.ami_id}"
+  ami = lookup(var.ami_id, var.aws_region )
   instance_type = "t2.micro"
   key_name = "${var.ami_key_pair_name}"
   security_groups = ["${aws_security_group.ingress-all-test.id}"]
