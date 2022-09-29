@@ -13,13 +13,3 @@ variable "ami_id" {
     }
 }
 variable "ami_key_pair_name" {}
-
-variable "secret_key" {
-    type = string
-      default = "var.secret.value"
-
-}
-variable "access_key" {
-    type = string
-      default = "var.access.value"
-}
